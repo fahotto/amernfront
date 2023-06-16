@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Clientes = () => {
   
-  const DATOS = process.env.REACT_APP_DATOS; 
+  const DATOS = "https://amernback2-production.up.railway.app/clientes"; 
 
   console.log(DATOS);
   
