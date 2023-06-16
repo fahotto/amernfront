@@ -35,10 +35,10 @@ const Clientes = () => {
     }
 
     const onDelete = (id) => {
-   /*   axios.delete(`${ELIMINAR}/${id}`)
+    axios.delete(`${DATOS}/${id}`)
       .then(() => {
           getData()
-      })*/
+      })
 
       console.log (`${id} - Eliminado`)
     }
