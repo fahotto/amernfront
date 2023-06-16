@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Clientes = () => {
   
-  const DATOS = 'http://localhost:4200/clientes'; 
+  const DATOS = process.env.REACT_APP_DATOS; 
 
   console.log(DATOS);
   
