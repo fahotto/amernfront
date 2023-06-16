@@ -4,13 +4,11 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios' ;
 import Swal from 'sweetalert2';
 
-
+ 
 const Formulario = () => {
 
     const URL = process.env.REACT_APP_URL;
-
-   
-
+ 
     const { register, handleSubmit, reset, formState: {errors} } = useForm ({
         defaultValues: {
             nombre: '',
@@ -19,7 +17,7 @@ const Formulario = () => {
             password: ''
         }
     });
-
+ 
 const onSubmit = (datos, e) => {
     e.preventDefault();
     try {
@@ -38,7 +36,7 @@ const onSubmit = (datos, e) => {
 }
 
     return (
-        <>
+        <div className="App">
             <h1>Formulario de Registro</h1>
         
             <Form onSubmit={handleSubmit(onSubmit)}>
@@ -105,13 +103,10 @@ const onSubmit = (datos, e) => {
                             <Button.Or />
                             <Button type='submit' positive>Enviar Datos</Button>
                         </Button.Group>
-                    {/* 
-                    <Button type='submit'>Enviar Datos</Button>
-                    <Button type='button' onClick={() => reset()}>Limpiar Formulario</Button> 
-                    */}
+                    
                 </div>
             </Form>
-        </>
+        </div>
     )}
 
 
